@@ -1,11 +1,8 @@
 import os
 import random
-from urllib import request
-import requests
-import pprint
 import json
+import requests
 import wikipediaapi
-
 
 
 from flask import Flask, render_template
@@ -28,7 +25,7 @@ def homepage():
 #setting a random movie id equal to item. sets item equal to movie_id in the url below
     movie_id = item
     BASE_URL = "https://api.themoviedb.org/3"
-    poster_url = "https://image.tmdb.org/t/p/original/"
+    POSTER_URL = "https://image.tmdb.org/t/p/original/"
     find = requests.get(f"{BASE_URL}/movie/{movie_id}", params={'api_key':os.getenv("api_key")})
 
 #printing out the data from the randomized movie ids
@@ -43,7 +40,7 @@ def homepage():
     movie_genre = parse_json['genres']
 
 
-    _poster = (poster_url+movie_pic)
+    _poster = (POSTER_URL+movie_pic)
 
 
     #wiki pull through api
