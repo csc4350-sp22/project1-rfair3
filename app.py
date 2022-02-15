@@ -25,7 +25,7 @@ def homepage():
 #setting a random movie id equal to item. sets item equal to movie_id in the url below
     movie_id = item
     BASE_URL = "https://api.themoviedb.org/3"
-    poster_url = "https://image.tmdb.org/t/p/original/"
+    POSTER_URL = "https://image.tmdb.org/t/p/original/"
     find = requests.get(f"{BASE_URL}/movie/{movie_id}", params={'api_key':os.getenv("api_key")})
 
 #printing out the data from the randomized movie ids
