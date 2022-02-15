@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <h1>My Movie Explorer{{ topic }}</h1>
+    <div class='container'>
+        {% for i in range(1) %}
+        <div class='item'>
+            <p><b>{{ title }}</b></p>
+            <p>{{ tagline }}</p>
+            <p>Genres: {{ genre }}</p>
+            <img src={{pic}} style="width:600px;height:800px;" >
+            <a href={{ wiki }}> <br> Click here to see Wikipedia page!</a>
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+
+</html>
